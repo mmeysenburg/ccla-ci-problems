@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Parallel π: Monte Carlo estimation
+title: Parallel pi: Monte Carlo estimation
 subtitle: A good first OpenMP or OpenMPI problem 
 tags: [OpenMP, OpenMPI]
 comments: false
