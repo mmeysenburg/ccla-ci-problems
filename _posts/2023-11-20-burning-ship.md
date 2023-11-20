@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Parallel fractal: Burning Ship
+title: Parallel fractal - Burning Ship
 subtitle: An OpenMPI problem requiring more communication
 tags: [OpenMPI]
 comments: false
