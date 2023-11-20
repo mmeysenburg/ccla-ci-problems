@@ -11,7 +11,7 @@ This is the current list of resources:
 ## Sample HPC problems
 
 - [Parallel π: Monte Carlo estimation](./2023-11-16-monte-carlo/)
-- Parallel fractals: Burning Ship
+- [Parallel fractals: Burning Ship](./2023-11-20-burning-ship/)
 - Parallel sorting: Bucket Sort
 
 New content will be added periodically, and each new addition will be 
