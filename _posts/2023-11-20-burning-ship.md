@@ -37,7 +37,7 @@ The rectangle represents your image, with coordinates shown for the upper left a
 
 Here is a Python function you could use to do this translation:
 
-```
+{% highlight python linenos %}
 def mapToRange(val, valLo, valHi, outLo, outHi):
     '''
     Map a value from the range [valLo, valHi] to [outLo, outHi].
@@ -55,7 +55,7 @@ def mapToRange(val, valLo, valHi, outLo, outHi):
       val mapped onto the range [outLo, outHi]
 
     return outLo + ((outHi - outLo) / (valHi - valLo)) * (val - valLo)
-```
+{% endhighlight %}
 
 If the pixel you are currently processing is at `(row, col)`, and the height of your image is `h` pixels, then the function call
 
@@ -67,7 +67,7 @@ would map the image pixel `row` value to the correct fractal *y* coordinate.
 
 For each point in the image, we test to see if the point is in the Burning Ship fractal set via this function:
 
-```
+{% highlight python linenos %}
 def testPoint(x, y):
     '''
     Test a point to see if it belongs to the Burning Ship set or not.
@@ -93,13 +93,13 @@ def testPoint(x, y):
         i += 1
 
     return i
-```
+{% endhighlight %}
 
 This function returns a number in *[0, 255]*. A value of 255 means the point is in part of the "ship" in the Burning Ship fractal, while values less than 255 represent some degree of closeness to being in the set. We will use the return value of the `testPoint()` function to set the red, green, and blue values for each point in the output image. 
 
 Now we can finish the code for our uniprocessor Burning Ship fractal maker:
 
-```
+{% highlight python linenos %}
 '''
  ' Main program starts here.
 '''
@@ -130,7 +130,7 @@ for row in range(h):
 
 # Now we can output the image!
 imageio.imwrite(fileName, image)
-```
+{% endhighlight %}
 
 We read the parameters for the fractal from the command-line, create a black image of the appropriate dimensions, and then use nested for loops to iterate over each pixel in the image. For each pixel, we test to see if it is in the Burning Ship fractal set, and then use the return value to set the gray scale color of the pixel. Finally, we use the `imageio` module's `imwrite()` function to write our image out to disk. 
 
